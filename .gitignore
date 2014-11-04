@@ -1,0 +1,8 @@
+apt/*/db
+apt/*/dists
+apt/*/pool
+apt/domjudge-repo.key
+apt/gpghome
+
+support/signing-key_sec.gpg
+support/signing-key_pub.gpg

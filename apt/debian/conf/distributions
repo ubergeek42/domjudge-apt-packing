@@ -1,0 +1,29 @@
+Origin: DOMjudge Developers Repo
+Label: DOMjudge Developers Repo
+Codename: sid
+Architectures: i386 amd64
+Components: main
+Description: DOMjudge APT Repository
+SignWith: yes
+DebOverride: override.sid
+DscOverride: override.sid
+
+Origin: DOMjudge Developers Repo
+Label: DOMjudge Developers Repo
+Codename: jessie
+Architectures: i386 amd64
+Components: main
+Description: DOMjudge APT Repository
+SignWith: yes
+DebOverride: override.jessie
+DscOverride: override.jessie
+
+Origin: DOMjudge Developers Repo
+Label: DOMjudge Developers Repo
+Codename: wheezy
+Architectures: i386 amd64
+Components: main
+Description: DOMjudge APT Repository
+SignWith: yes
+DebOverride: override.wheezy
+DscOverride: override.wheezy

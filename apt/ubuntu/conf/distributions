@@ -1,0 +1,29 @@
+Origin: DOMjudge Developers Repo
+Label: DOMjudge Developers Repo
+Codename: utopic
+Architectures: i386 amd64
+Components: main
+Description: DOMjudge APT Repository
+SignWith: yes
+DebOverride: override.utopic
+DscOverride: override.utopic
+
+Origin: DOMjudge Developers Repo
+Label: DOMjudge Developers Repo
+Codename: trusty
+Architectures: i386 amd64
+Components: main
+Description: DOMjudge APT Repository
+SignWith: yes
+DebOverride: override.trusty
+DscOverride: override.trusty
+
+Origin: DOMjudge Developers Repo
+Label: DOMjudge Developers Repo
+Codename: precise
+Architectures: i386 amd64
+Components: main
+Description: DOMjudge APT Repository
+SignWith: yes
+DebOverride: override.precise
+DscOverride: override.precise
