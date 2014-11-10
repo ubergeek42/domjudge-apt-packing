@@ -14,5 +14,10 @@ Requirements:
 * reprepro (`apt-get install reprepro`)
 
 
-Create a keypair:
-gpg
+Create a keypair, then export it in the appropriate location
+```
+$ gpg --gen-key # Use the defaults
+$ gpg --export -a > support/signing-key_pub.gpg
+$ gpg --export-secret-key -a > support/signing-key_sec.gpg
+
+```

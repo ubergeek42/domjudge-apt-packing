@@ -7,6 +7,7 @@ DISTRIBUTIONS+="sid jessie wheezy "
 DOMJUDGE_GIT="http://github.com/DOMjudge/domjudge.git"
 DOMJUDGE_BRANCH="master"
 DOMJUDGE_PACKAGING_GIT="http://github.com/DOMjudge/domjudge-packaging.git"
+#DOMJUDGE_PACKAGING_GIT="http://github.com/ubergeek42/domjudge-packaging.git"
 DOMJUDGE_PACKAGING_BRANCH="master"
 
 DEBIANREVNUM="1"
@@ -126,11 +127,14 @@ for DISTRIBUTION in $DISTRIBUTIONS; do
             DCHDISTRO="stable"
             ;;
     esac
-    dch -v "${DOMVERSION}${DEBIANREV}" -D $DCHDISTRO "Development Snapshot($DOMJUDGE_BRANCH) - $GITVERSION"
+    dch --force-bad-version \
+        --newversion "${DOMVERSION}${DEBIANREV}" \
+        --distribution $DCHDISTRO \
+        "Development Snapshot($DOMJUDGE_BRANCH) - $GITVERSION"
 
     # build the source package
     debuild -k"$DEBSIGN_KEYID" -S -sa -i
-    pbuilder-dist ${DISTRIBUTION} build "../${PKGNAME}.dsc"
+    pbuilder-dist ${DISTRIBUTION} build --buildresult "/pbuilder/${DISTRIBUTION}_result/" --hookdir "/pbuilder/hook.d" "../${PKGNAME}.dsc"
 
     # Clean up a little bit
     cd /tmp
